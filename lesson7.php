@@ -54,7 +54,7 @@ for($i=0; $i<count($arr); $i++){  //大枠
 
     echo "<br/>";
 
-    //すこし変化
+    //すこし修正
     $arr_asc = "";
     for($x=0; $x<count($arr)-1; $x++){
         $arr_asc .= "{$arr[$x]},\n";
@@ -65,15 +65,16 @@ for($i=0; $i<count($arr); $i++){  //大枠
     echo "<br/>";
 
     //最後に100を別でかくのが美しくない
-    //2つ使う
-    $arr_ASC ="";
-    foreach($arr as $a => $b){
-        $arr_ASC .= $b;
-        if($a<count($arr)-1){
-            $arr_ASC .= ",\n";
+    //さらに修正
+
+    $arr_asc = "";
+    for($x=0; $x<count($arr); $x++){
+        $arr_asc .= $arr[$x];
+        if($x<count($arr)-1){
+            $arr_asc .= ",\n";
         }
     }
-    echo $arr_ASC;
+    echo $arr_asc;
 
 ?>
 </body>
