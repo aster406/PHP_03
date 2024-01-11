@@ -51,6 +51,30 @@ for($i=0; $i<count($arr); $i++){  //大枠
     }
     echo $arr[count($arr)-1];
     //もっとスマートにできそうではある
+
+    echo "<br/>";
+
+    //すこし変化
+    $arr_asc = "";
+    for($x=0; $x<count($arr)-1; $x++){
+        $arr_asc .= "{$arr[$x]},\n";
+    }
+    $arr_asc .= $arr[count($arr)-1];
+    echo $arr_asc;
+
+    echo "<br/>";
+
+    //最後に100を別でかくのが美しくない
+    //2つ使う
+    $arr_ASC ="";
+    foreach($arr as $a => $b){
+        $arr_ASC .= $b;
+        if($a<count($arr)-1){
+            $arr_ASC .= ",\n";
+        }
+    }
+    echo $arr_ASC;
+
 ?>
 </body>
 </html>
